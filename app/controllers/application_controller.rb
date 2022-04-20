@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
   patch '/bakeries/:id' do
     name = Bakery.find(params[:id])
 
-    name.update("name": "Northwestside Bakery")
+    name.update(name: params[:name])
 
     name.to_json
   end 
